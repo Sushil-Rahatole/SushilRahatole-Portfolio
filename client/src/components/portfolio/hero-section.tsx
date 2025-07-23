@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ onScrollToSection }: HeroSectionProps) {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Floating Shapes Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div

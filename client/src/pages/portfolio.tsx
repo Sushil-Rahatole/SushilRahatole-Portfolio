@@ -3,10 +3,11 @@ import { Navigation } from "@/components/portfolio/navigation";
 import { HeroSection } from "@/components/portfolio/hero-section";
 import { AboutSection } from "@/components/portfolio/about-section";
 import { ProjectsSection } from "@/components/portfolio/projects-section";
-import { EducationExperienceSection } from "@/components/portfolio/education-experience-section";
+import { EducationSection } from "@/components/portfolio/education-section";
+import { ExperienceSection } from "@/components/portfolio/experience-section";
 import { ContactSection } from "@/components/portfolio/contact-section";
 
-const sections = ["home", "about", "projects", "education", "contact"];
+const sections = ["home", "about", "projects", "education", "experience", "contact"];
 
 export default function Portfolio() {
   const activeSection = useScrollSpy(sections);
@@ -44,7 +45,8 @@ export default function Portfolio() {
         <HeroSection onScrollToSection={scrollToSection} />
         <AboutSection />
         <ProjectsSection />
-        <EducationExperienceSection />
+        <EducationSection />
+        <ExperienceSection />
         <ContactSection />
       </main>
 
