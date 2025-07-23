@@ -38,7 +38,7 @@ export function Navigation({ sections }: NavigationProps) {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex-shrink-0"
+            className="flex-shrink-0 z-10"
           >
             <span className="text-2xl font-bold gradient-text">SR</span>
           </motion.div>

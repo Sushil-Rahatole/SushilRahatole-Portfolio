@@ -115,14 +115,14 @@ export function ContactSection() {
                   whileHover={{ x: 5 }}
                   className="flex items-center space-x-4"
                 >
-                  <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center">
-                    <Phone className="text-accent w-5 h-5" />
+                  <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
+                    <Phone className="text-green-500 dark:text-green-400 w-5 h-5" />
                   </div>
                   <div>
                     <p className="text-muted-foreground">Phone</p>
                     <a 
                       href="tel:+919309289200" 
-                      className="text-foreground hover:text-accent transition-colors"
+                      className="text-foreground dark:text-white hover:text-green-500 dark:hover:text-green-400 transition-colors"
                     >
                       +91 9309289200
                     </a>
@@ -133,8 +133,8 @@ export function ContactSection() {
                   whileHover={{ x: 5 }}
                   className="flex items-center space-x-4"
                 >
-                  <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
-                    <FaLinkedin className="text-secondary text-xl" />
+                  <div className="w-12 h-12 bg-blue-600/20 rounded-full flex items-center justify-center">
+                    <FaLinkedin className="text-blue-600 dark:text-blue-400 text-xl" />
                   </div>
                   <div>
                     <p className="text-muted-foreground">LinkedIn</p>
@@ -142,7 +142,7 @@ export function ContactSection() {
                       href="http://www.linkedin.com/in/sushil-rahatole-347182263" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-foreground hover:text-secondary transition-colors"
+                      className="text-foreground dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       Connect with me
                     </a>
