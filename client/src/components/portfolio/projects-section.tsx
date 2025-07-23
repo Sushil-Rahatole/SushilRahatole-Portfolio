@@ -177,7 +177,7 @@ export function ProjectsSection() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-accent hover:text-primary transition-colors"
+                        className="text-gray-600 dark:text-white hover:text-primary transition-colors"
                         title="Live Demo"
                       >
                         <ExternalLink className="w-5 h-5" />
@@ -190,7 +190,7 @@ export function ProjectsSection() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-accent hover:text-primary transition-colors"
+                        className="text-gray-600 dark:text-white hover:text-primary transition-colors"
                         title="GitHub"
                       >
                         <Github className="w-5 h-5" />

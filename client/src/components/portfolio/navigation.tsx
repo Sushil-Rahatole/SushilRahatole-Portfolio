@@ -51,7 +51,7 @@ export function Navigation({ sections }: NavigationProps) {
                   key={section}
                   onClick={() => scrollToSection(section)}
                   className={`hover:text-primary transition-colors duration-300 capitalize relative ${
-                    activeSection === section ? "text-primary" : "text-foreground dark:text-white"
+                    activeSection === section ? "text-primary" : "text-gray-800 dark:text-white"
                   }`}
                 >
                   {section}
@@ -115,7 +115,7 @@ export function Navigation({ sections }: NavigationProps) {
               key={section}
               onClick={() => scrollToSection(section)}
               className={`block w-full text-left px-3 py-2 hover:bg-white/10 rounded-md transition-colors capitalize ${
-                activeSection === section ? "text-primary bg-white/5" : "text-foreground dark:text-white"
+                activeSection === section ? "text-primary bg-white/5" : "text-gray-800 dark:text-white"
               }`}
             >
               {section}
