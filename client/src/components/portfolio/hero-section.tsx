@@ -33,10 +33,8 @@ export function HeroSection({ onScrollToSection }: HeroSectionProps) {
           className="floating-shape w-40 h-40 absolute bottom-1/3 right-1/3"
         />
       </div>
-
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -49,7 +47,7 @@ export function HeroSection({ onScrollToSection }: HeroSectionProps) {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-8"
+            className="mb-8 ml-[16px] mr-[16px]"
           >
             <motion.div
               animate={{ y: [0, -10, 0] }}
@@ -158,7 +156,6 @@ export function HeroSection({ onScrollToSection }: HeroSectionProps) {
           </motion.div>
         </motion.div>
       </div>
-
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
