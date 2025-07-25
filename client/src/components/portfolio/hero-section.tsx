@@ -47,7 +47,7 @@ export function HeroSection({ onScrollToSection }: HeroSectionProps) {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-8 ml-[16px] mr-[16px]"
+            className="ml-[16px] mr-[16px] mt-[30px] mb-[30px]"
           >
             <motion.div
               animate={{ y: [0, -10, 0] }}
