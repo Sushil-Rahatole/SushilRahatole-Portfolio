@@ -31,7 +31,7 @@ export function Navigation({ sections }: NavigationProps) {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed w-full top-0 navbar-glass z-50 transition-all duration-300"
+      className="fixed w-full top-0 bg-white/90 dark:bg-black/80 backdrop-blur-xl border-b border-gray-200 dark:border-white/10 z-50 transition-all duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -51,7 +51,7 @@ export function Navigation({ sections }: NavigationProps) {
                   key={section}
                   onClick={() => scrollToSection(section)}
                   className={`hover:text-primary transition-colors duration-300 capitalize relative ${
-                    activeSection === section ? "text-primary" : "text-white dark:text-white"
+                    activeSection === section ? "text-primary" : "text-black dark:text-white"
                   }`}
                 >
                   {section}
@@ -115,7 +115,7 @@ export function Navigation({ sections }: NavigationProps) {
               key={section}
               onClick={() => scrollToSection(section)}
               className={`block w-full text-left px-3 py-2 hover:bg-white/10 rounded-md transition-colors capitalize ${
-                activeSection === section ? "text-primary bg-white/5" : "text-white dark:text-white"
+                activeSection === section ? "text-primary bg-white/5" : "text-black dark:text-white"
               }`}
             >
               {section}

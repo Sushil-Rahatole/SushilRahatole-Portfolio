@@ -1,17 +1,16 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { useMutation } from "@tanstack/react-query";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Mail, Phone, Loader2 } from "lucide-react";
+import { Mail, Phone, Loader2, Send } from "lucide-react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
+import emailjs from '@emailjs/browser';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -24,6 +23,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export function ContactSection() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -35,29 +35,41 @@ export function ContactSection() {
     },
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormValues) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
+  const onSubmit = async (data: ContactFormValues) => {
+    setIsSubmitting(true);
+    
+    try {
+      // EmailJS configuration
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        subject: data.subject,
+        message: data.message,
+        to_email: 'sushilrahatole@gmail.com'
+      };
+
+      // Replace these with your actual EmailJS credentials
+      const serviceId = 'service_your_service_id'; // You'll need to get this from EmailJS
+      const templateId = 'template_your_template_id'; // You'll need to get this from EmailJS  
+      const publicKey = 'your_public_key'; // You'll need to get this from EmailJS
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
       toast({
         title: "Message sent successfully!",
         description: "Thank you for reaching out. I'll get back to you soon.",
       });
       form.reset();
-    },
-    onError: () => {
+    } catch (error) {
+      console.error('EmailJS Error:', error);
       toast({
         title: "Failed to send message",
         description: "Please try again or contact me directly via email.",
         variant: "destructive",
       });
-    },
-  });
-
-  const onSubmit = (data: ContactFormValues) => {
-    contactMutation.mutate(data);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -270,16 +282,19 @@ export function ContactSection() {
                 
                 <Button 
                   type="submit" 
-                  disabled={contactMutation.isPending}
+                  disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white py-4 rounded-lg font-semibold transform transition-all duration-300 hover:scale-105"
                 >
-                  {contactMutation.isPending ? (
+                  {isSubmitting ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                       Sending...
                     </>
                   ) : (
-                    "Send Message"
+                    <>
+                      <Send className="mr-2 h-4 w-4" />
+                      Send Message
+                    </>
                   )}
                 </Button>
               </form>

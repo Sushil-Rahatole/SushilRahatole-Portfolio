@@ -49,29 +49,29 @@ export function AboutSection() {
           >
             <div className="text-lg leading-relaxed text-muted-foreground dark:text-gray-300 space-y-4">
               <p>
-                Hi, I'm <strong className="text-foreground dark:text-white">Sushil Rahatole</strong>, a passionate{" "}
-                <strong className="text-primary dark:text-blue-400">Full Stack Developer</strong> and lifelong tech explorer 
+                Hi, I'm <strong className="text-foreground dark:text-white font-bold">Sushil Rahatole</strong>, a passionate{" "}
+                <strong className="text-foreground dark:text-white font-bold">Full Stack Developer</strong> and lifelong tech explorer 
                 currently pursuing my Bachelor's in Computer Engineering. I've always believed that{" "}
-                <strong className="text-foreground dark:text-white">great code isn't just functional — it's thoughtful, elegant, and user-focused.</strong>
+                <strong className="text-foreground dark:text-white font-bold">great code isn't just functional — it's thoughtful, elegant, and user-focused.</strong>
               </p>
 
               <p>
                 My journey began with curiosity and a love for solving real-world problems. From building{" "}
-                <strong className="text-accent dark:text-green-400">AI-powered interview platforms</strong> to crafting full-fledged{" "}
-                <strong className="text-accent dark:text-green-400">E-commerce and rental web apps</strong>, I've explored a wide range of 
-                technologies — including <strong className="text-primary dark:text-blue-400">React.js, Node.js, MongoDB, Firebase</strong>, 
+                <strong className="text-foreground dark:text-white font-bold">AI-powered interview platforms</strong> to crafting full-fledged{" "}
+                <strong className="text-foreground dark:text-white font-bold">E-commerce and rental web apps</strong>, I've explored a wide range of 
+                technologies — including <strong className="text-foreground dark:text-white font-bold">React.js, Node.js, MongoDB, Firebase</strong>, 
                 and more. I'm constantly learning and pushing my boundaries with every project I take on.
               </p>
 
               <p>
-                I'm currently working on <strong className="text-secondary dark:text-purple-400">creative MERN-based clones</strong> and 
+                I'm currently working on <strong className="text-foreground dark:text-white font-bold">creative MERN-based clones</strong> and 
                 building tools that improve user experience, speed, and interactivity. Whether it's integrating voice AI, 
                 managing state-heavy applications, or refining user journeys, I love bringing ideas to life through code.
               </p>
 
               <p>
                 Beyond just writing code, I'm driven by the desire to{" "}
-                <strong className="text-foreground dark:text-white">create things that people love to use.</strong> That's why I care 
+                <strong className="text-foreground dark:text-white font-bold">create things that people love to use.</strong> That's why I care 
                 deeply about clean UI/UX, performance, and user-centric design.
               </p>
 
