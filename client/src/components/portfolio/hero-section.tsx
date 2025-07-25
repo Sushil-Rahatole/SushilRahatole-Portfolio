@@ -42,7 +42,7 @@ export function HeroSection({ onScrollToSection }: HeroSectionProps) {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          {/* Profile Image */}
+          {/* Professional Profile Photo */}
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -52,10 +52,32 @@ export function HeroSection({ onScrollToSection }: HeroSectionProps) {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-primary to-secondary p-1"
+              className="w-40 h-40 mx-auto rounded-full bg-gradient-to-r from-primary to-secondary p-1 shadow-2xl"
             >
-              <div className="w-full h-full rounded-full bg-background dark:bg-dark flex items-center justify-center">
-                <span className="text-4xl font-bold gradient-text">SR</span>
+              <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-800">
+                {/* Professional Photo Placeholder - Replace with your actual photo */}
+                <div className="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 flex items-center justify-center">
+                  <svg
+                    className="w-20 h-20 text-gray-600 dark:text-gray-300"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+                {/* 
+                  To add your photo, replace the div above with:
+                  <img 
+                    src="/path-to-your-photo.jpg" 
+                    alt="Sushil Rahatole - Full Stack Developer"
+                    className="w-full h-full object-cover"
+                  />
+                */}
               </div>
             </motion.div>
           </motion.div>
