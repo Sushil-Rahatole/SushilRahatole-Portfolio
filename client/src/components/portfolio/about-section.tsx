@@ -47,7 +47,7 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="text-lg leading-relaxed text-muted-foreground dark:text-gray-300 space-y-4">
+            <div className="text-lg leading-relaxed text-muted-foreground dark:text-gray-300 space-y-4 text-justify">
               <p>
                 Hi, I'm <strong className="text-foreground dark:text-white font-bold">Sushil Rahatole</strong>, a passionate{" "}
                 <strong className="text-foreground dark:text-white font-bold">Full Stack Developer</strong> and lifelong tech explorer 

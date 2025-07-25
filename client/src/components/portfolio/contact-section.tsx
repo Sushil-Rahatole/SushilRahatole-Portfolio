@@ -6,11 +6,18 @@ import { z } from "zod";
 import { Mail, Phone, Loader2, Send } from "lucide-react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -24,7 +31,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 export function ContactSection() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -37,7 +44,7 @@ export function ContactSection() {
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
-    
+
     try {
       // EmailJS configuration
       const templateParams = {
@@ -45,23 +52,23 @@ export function ContactSection() {
         from_email: data.email,
         subject: data.subject,
         message: data.message,
-        to_email: 'sushilrahatole@gmail.com'
+        to_email: "sushilrahatole@gmail.com",
       };
 
       // Replace these with your actual EmailJS credentials
-      const serviceId = 'service_your_service_id'; // You'll need to get this from EmailJS
-      const templateId = 'template_your_template_id'; // You'll need to get this from EmailJS  
-      const publicKey = 'your_public_key'; // You'll need to get this from EmailJS
+      const serviceId = "service_l6emlh9"; // You'll need to get this from EmailJS
+      const templateId = "template_pfy81yc"; // You'll need to get this from EmailJS
+      const publicKey = "qTqAz__2z-sjpZedw"; // You'll need to get this from EmailJS
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      
+
       toast({
         title: "Message sent successfully!",
         description: "Thank you for reaching out. I'll get back to you soon.",
       });
       form.reset();
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error("EmailJS Error:", error);
       toast({
         title: "Failed to send message",
         description: "Please try again or contact me directly via email.",
@@ -86,8 +93,8 @@ export function ContactSection() {
             Let's Work <span className="gradient-text">Together</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
-            Have a project in mind? Let's discuss how we can bring your ideas to life with clean, 
-            efficient code and stunning user experiences.
+            Have a project in mind? Let's discuss how we can bring your ideas to
+            life with clean, efficient code and stunning user experiences.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto" />
         </motion.div>
@@ -103,7 +110,7 @@ export function ContactSection() {
           >
             <div className="glass rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
-              
+
               <div className="space-y-6">
                 <motion.div
                   whileHover={{ x: 5 }}
@@ -114,8 +121,8 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-muted-foreground">Email</p>
-                    <a 
-                      href="mailto:sushilrahatole@gmail.com" 
+                    <a
+                      href="mailto:sushilrahatole@gmail.com"
                       className="text-foreground hover:text-primary transition-colors"
                     >
                       sushilrahatole@gmail.com
@@ -132,8 +139,8 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-muted-foreground">Phone</p>
-                    <a 
-                      href="tel:+919309289200" 
+                    <a
+                      href="tel:+919309289200"
                       className="text-foreground dark:text-white hover:text-green-500 dark:hover:text-green-400 transition-colors"
                     >
                       +91 9309289200
@@ -150,10 +157,10 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-muted-foreground">LinkedIn</p>
-                    <a 
-                      href="http://www.linkedin.com/in/sushil-rahatole-347182263" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href="http://www.linkedin.com/in/sushil-rahatole-347182263"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-foreground dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       Connect with me
@@ -205,7 +212,10 @@ export function ContactSection() {
             className="glass rounded-2xl p-8"
           >
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-6"
+              >
                 <FormField
                   control={form.control}
                   name="name"
@@ -213,9 +223,9 @@ export function ContactSection() {
                     <FormItem>
                       <FormLabel>Name</FormLabel>
                       <FormControl>
-                        <Input 
-                          placeholder="Your full name" 
-                          {...field} 
+                        <Input
+                          placeholder="Your full name"
+                          {...field}
                           className="bg-white/5 border-white/10 focus:border-primary"
                         />
                       </FormControl>
@@ -223,7 +233,7 @@ export function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="email"
@@ -231,10 +241,10 @@ export function ContactSection() {
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input 
-                          placeholder="your.email@example.com" 
-                          type="email" 
-                          {...field} 
+                        <Input
+                          placeholder="your.email@example.com"
+                          type="email"
+                          {...field}
                           className="bg-white/5 border-white/10 focus:border-primary"
                         />
                       </FormControl>
@@ -242,7 +252,7 @@ export function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="subject"
@@ -250,9 +260,9 @@ export function ContactSection() {
                     <FormItem>
                       <FormLabel>Subject</FormLabel>
                       <FormControl>
-                        <Input 
-                          placeholder="What's this about?" 
-                          {...field} 
+                        <Input
+                          placeholder="What's this about?"
+                          {...field}
                           className="bg-white/5 border-white/10 focus:border-primary"
                         />
                       </FormControl>
@@ -260,7 +270,7 @@ export function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="message"
@@ -268,10 +278,10 @@ export function ContactSection() {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea 
-                          placeholder="Tell me about your project or just say hello!" 
-                          rows={5} 
-                          {...field} 
+                        <Textarea
+                          placeholder="Tell me about your project or just say hello!"
+                          rows={5}
+                          {...field}
                           className="bg-white/5 border-white/10 focus:border-primary resize-none"
                         />
                       </FormControl>
@@ -279,9 +289,9 @@ export function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
-                <Button 
-                  type="submit" 
+
+                <Button
+                  type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white py-4 rounded-lg font-semibold transform transition-all duration-300 hover:scale-105"
                 >
