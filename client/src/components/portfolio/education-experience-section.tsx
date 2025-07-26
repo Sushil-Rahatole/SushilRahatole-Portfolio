@@ -4,14 +4,14 @@ import { GraduationCap, Briefcase, Calendar, MapPin, Award } from "lucide-react"
 const education = [
   {
     degree: "Bachelor's in Computer Engineering",
-    institution: "Engineering College",
+    institution: "Savitribai Phule Pune University",
     location: "India",
-    duration: "2022 - 2026",
-    status: "Currently Pursuing",
-    description: "Focusing on software development, data structures, algorithms, and modern web technologies. Active participant in college hackathons and coding competitions.",
+    duration: "2024 - 2027",
+    status: "Pre-Final Year Student",
+    description: "Focusing on software development, data structures & algorithms, and modern web technologies. Active participant in college hackathons and coding competitions.",
     achievements: [
-      "Dean's List for Academic Excellence",
-      "Active member of Coding Club",
+      "OSCI'25 Contributor",
+      "Active member of Google Developers's Group",
       "Participant in multiple hackathons"
     ]
   }

@@ -6,17 +6,17 @@ const experience = [
     title: "Frontend Developer Intern",
     company: "Microspectra Pvt Ltd",
     location: "Shegaon, Maharashtra",
-    duration: "2023 - Present",
+    duration: "June 2023 - August 2023",
     type: "Internship",
-    description: "Working as a Frontend Developer Intern focusing on React.js development, UI/UX implementation, and modern web technologies. Collaborating with the development team to build responsive and user-friendly web applications.",
+    description: "Working as a Frontend Developer Intern focusing on Javascript development, UI/UX implementation, and modern web technologies. Collaborating with the development team to build responsive and user-friendly web applications.",
     achievements: [
-      "Developed responsive web applications using React.js",
+      "Developed responsive web applications using Javascript",
       "Implemented modern UI/UX designs with Tailwind CSS",
       "Collaborated with senior developers on project architecture",
       "Improved application performance and user experience",
       "Gained hands-on experience with industry best practices"
     ],
-    technologies: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Git"]
+    technologies: ["Java", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "Git"]
   }
 ];
 
@@ -170,7 +170,7 @@ export function ExperienceSection() {
             </h3>
             <p className="text-muted-foreground dark:text-gray-300 mb-6">
               I'm actively seeking full-time opportunities where I can contribute my skills in 
-              frontend development and continue growing as a software engineer.
+              Full-Stack development and continue growing as a software engineer.
             </p>
             <motion.div
               whileHover={{ scale: 1.05 }}

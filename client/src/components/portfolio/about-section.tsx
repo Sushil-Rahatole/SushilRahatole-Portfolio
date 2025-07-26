@@ -6,8 +6,13 @@ import {
   SiMongodb, 
   SiFirebase, 
   SiTailwindcss,
-  SiGit
+  SiGit,
+  SiJavascript,
+  SiTypescript,
+  SiPython,
+  SiMysql
 } from "react-icons/si";
+import { FaAws, FaJava } from "react-icons/fa";
 import { Code, Database } from "lucide-react";
 
 const techStack = [
@@ -19,6 +24,12 @@ const techStack = [
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-400" },
   { name: "REST APIs", icon: Code, color: "text-purple-400" },
   { name: "Git", icon: SiGit, color: "text-red-500" },
+  { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
+  { name: "TypeScript", icon: SiTypescript, color: "text-blue-500" },
+  { name: "AWS", icon: FaAws, color: "text-orange-400" },
+  { name: "Python", icon: SiPython, color: "text-yellow-500" },
+  { name: "MySQL", icon: SiMysql, color: "text-blue-600" },
+  { name: "Java", icon: FaJava, color: "text-red-600" },
 ];
 
 export function AboutSection() {
@@ -64,7 +75,7 @@ export function AboutSection() {
               </p>
 
               <p>
-                I'm currently working on <strong className="text-foreground dark:text-white font-bold">creative MERN-based clones</strong> and 
+                I'm currently focused on building <strong className="text-foreground dark:text-white font-bold">dynamic MERN-based applications</strong> and 
                 building tools that improve user experience, speed, and interactivity. Whether it's integrating voice AI, 
                 managing state-heavy applications, or refining user journeys, I love bringing ideas to life through code.
               </p>
@@ -76,7 +87,7 @@ export function AboutSection() {
               </p>
 
               <p>
-                When I'm not coding, you'll find me exploring new tech trends, participating in college hackathons, 
+                When I'm not coding, you'll find me exploring new tech trends, working on startup, participating in college hackathons, 
                 or helping others learn programming.
               </p>
             </div>

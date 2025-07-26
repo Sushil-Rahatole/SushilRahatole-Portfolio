@@ -56,9 +56,9 @@ export function ContactSection() {
       };
 
       // Replace these with your actual EmailJS credentials
-      const serviceId = "service_l6emlh9"; // You'll need to get this from EmailJS
-      const templateId = "template_pfy81yc"; // You'll need to get this from EmailJS
-      const publicKey = "qTqAz__2z-sjpZedw"; // You'll need to get this from EmailJS
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICEID; // You'll need to get this from EmailJS
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATEID; // You'll need to get this from EmailJS
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLICKEY; // You'll need to get this from EmailJS
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
 

@@ -58,7 +58,7 @@ export default function Portfolio() {
               <strong className="gradient-text">Designed & Built by Sushil Rahatole</strong> — with passion and precision.
             </p>
             <p className="text-sm text-muted-foreground/60">
-              © 2024 All rights reserved. Made with ❤️ and lots of coffee.
+              © 2025 All rights reserved. Made with ❤️ and lots of coffee.
             </p>
           </div>
         </div>

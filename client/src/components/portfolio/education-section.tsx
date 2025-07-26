@@ -4,28 +4,28 @@ import { GraduationCap, Calendar, MapPin, Award, Book } from "lucide-react";
 const education = [
   {
     degree: "Bachelor's in Computer Engineering",
-    institution: "Engineering College",
+    institution: "Savitribai Phule Pune University",
     location: "India",
-    duration: "2022 - 2026",
-    status: "Currently Pursuing",
-    description: "Focusing on software development, data structures, algorithms, and modern web technologies. Active participant in college hackathons and coding competitions.",
+    duration: "2024 - 2027",
+    status: "Pre-Final Year Student",
+    description: "Focusing on software development, data structures & algorithms, and modern web technologies. Active participant in college hackathons and coding competitions.",
     achievements: [
-      "Dean's List for Academic Excellence",
-      "Active member of Coding Club",
+      "OSCI'25 Contributor",
+      "Active member of Google Developers's Group",
       "Participant in multiple hackathons"
     ],
     type: "Bachelor's Degree"
   },
   {
     degree: "Diploma in Computer Engineering",
-    institution: "Polytechnic College",
+    institution: "Government Polytechnic College",
     location: "India", 
-    duration: "2019 - 2022",
+    duration: "2021 - 2024",
     status: "Completed",
-    description: "Completed diploma with focus on programming fundamentals, database management, and web development technologies. Built strong foundation in computer science concepts.",
+    description: "Completed diploma with focus on programming fundamentals, database management, and web development technologies. Built strong foundation in computer science core concepts.",
     achievements: [
+      "1st prize winner in start-up project",
       "First Class with Distinction",
-      "Best Student in Programming",
       "Led technical projects team"
     ],
     type: "Diploma"
